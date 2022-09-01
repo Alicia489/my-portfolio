@@ -1,0 +1,10 @@
+@import "../../styles/fonts";
+@import "../../styles/colors";
+@import "../../styles/utils";
+
+.menu-item {
+    color: #ff1f8f !important;
+    @include fontSize(20, !important);
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+}

@@ -1,0 +1,207 @@
+@import "../../styles/fonts";
+@import "../../styles/colors";
+@import "../../styles/utils";
+
+.home-container {
+    .section-1 {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        // opacity: 0.5;
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+    
+        .content-container {
+            position: relative;
+            opacity: 1;
+            z-index: 10;
+
+            p {
+                @include margin(10,0);
+                color: #ff1f8f;
+                @include fontSize(80);
+                font-family: monospace;
+
+                @include mobile {
+                    @include fontSize(40);
+                }
+            }
+
+            h2 {
+                @include margin(10,0);
+                color: #ff1f8f;
+                @include fontSize(80);
+                text-transform: uppercase;
+                font-family: monospace;
+
+                @include mobile {
+                    margin-top: 10px;
+                    @include fontSize(40);
+                }
+            }
+        }
+    }
+
+    .section-2 {
+        // background-image: url('https://images.unsplash.com/photo-1579894963873-755d8c7f0754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODN8fHBpbmslMjB5ZWxsb3clMjAlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+        background-color: #ee91a5;
+        background-size: cover;
+        color: #ff1f8f;
+        @include padding(20, 0, 0);
+
+        p {
+            @include fontSize(20);
+            color: white;
+            @include font-medium();
+            width: 60%;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: toRem(50);
+
+            @include mobile {
+                width: 80%;
+            }
+        }
+
+        .tiles-container {
+            background-color: white;
+            @include padding(30, 0, 20);
+            @include borderRadius(20, 20, 0, 0);
+        }
+    }
+
+    .section-4 {
+        @include padding(30,0);
+        
+        .company-logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include mobile {
+                margin-bottom: 20px;
+            }
+        }
+        .company-logos {
+            width: 60%;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// tile styles
+
+.tile { 
+    // border: 1px solid black;
+    text-align: center;
+
+    .icon-container {
+        background-color: light-blue;
+        @include padding(20);
+        background-color: #e9d35be3;
+        margin: 0 auto;
+
+        .MuiSvgIcon-root {
+            color: black;
+            @include fontSize(40)
+        }
+    }
+
+    h3 {
+        text-transform: uppercase;
+        color: #b929a0;
+        @include fontSize(15);
+    }
+
+    p {
+        color: #212529 !important; 
+    }
+}
+
+// portfolio tile styles
+
+.portfolio-tile {
+    @include borderRadius(10);
+    width: 100%;
+    height: 0;
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+
+    &:hover {
+        background-color: #141c3a;
+        img {
+            opacity: 0;
+            transform: scale(1.2);
+        }
+
+        .details-container {
+            opacity: 1;
+        }
+
+        
+    }
+
+    img {
+        transform: scale(1);
+        transition: .35s ease-in-out;
+        @include borderRadius(10);
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 1;
+        object-fit: cover
+    }
+
+    .details-container {
+        @include padding(20);
+        z-index: 1;
+        opacity: 0;
+        transition: .65s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        p {
+            color: white;
+            @include fontSize(18);
+
+            @include mobile {
+                @include fontSize(20);
+            }
+        }
+    }
+}
+
+//new styles
+
+h1{
+    @include font-monoton;
+    @include fontSize(120);
+      letter-spacing:0.1em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+    text-shadow: 
+                          8px 8px #ff1f8f,
+                          20px 20px #000000;
+    @include margin(10,0);
+
+    @include mobile {
+        @include fontSize(60);
+    }
+  }

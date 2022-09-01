@@ -1,0 +1,113 @@
+@import "./fonts";
+@import "./colors";
+@import "./utils";
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  font-size: 16;
+
+  @include mobile {
+    font-size: 12px;
+  }
+  @include tablet {
+    font-size: 11px;
+  }
+  @include desktop {
+    font-size: 13px;
+  }
+  @include hd {
+    font-size: 14px;
+  }
+  @include hdPlus {
+    font-size: 15px;
+  }
+  @include fullHd {
+    font-size: 18px;
+  }
+  @include quadHd {
+    font-size: 20px;
+  }
+  @include uHd {
+    font-size: 22px;
+  }
+}
+
+body {
+  @include font-regular;
+  font-size: 16px;
+  color: #262626;
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  min-height: 100%;
+  position: relative;
+}
+
+h1 {
+  @include fontSize(40);
+  @include font-medium;
+}
+
+h2 {
+  @include fontSize(35);
+  @include font-medium;
+}
+
+h3 {
+  @include fontSize(20);
+  @include font-bold;
+  color: #383838;
+}
+
+h4 {
+  @include fontSize(28);
+  @include font-regular;
+}
+
+h5 {
+  @include fontSize(24);
+  @include font-regular;
+}
+
+h6 {
+  @include fontSize(20);
+  @include font-regular;
+  margin: 0;
+  color: #262626;
+}
+
+p {
+  @include fontSize(16);
+  @include font-regular;
+  color: rgb(124, 124, 125);
+}
+
+.subtitle-big {
+  @include fontSize(16);
+  @include font-regular;
+}
+
+.subtitle-small {
+  @include fontSize(14);
+  @include font-regular;
+}
+
+button {
+  span {
+    @include fontSize(12);
+    @include font-medium;
+  }
+}
+
+.caption {
+  @include fontSize(14);
+  @include font-medium;
+  color: #262626;
+}
+
+
+
+

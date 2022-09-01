@@ -1,0 +1,38 @@
+@import "../../styles/utils";
+@import "../../styles/fonts";
+@import "../../styles/colors";
+
+.contact-us-form-container {
+    margin-top: -120px;
+    // border: 1px solid black;
+    @include width(500);
+    @include padding(20);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+
+    @include mobile {
+        width: 80%;
+        margin-top: 0;
+        margin: 0 auto;
+    }
+
+    @include tablet {
+        width: 90%;
+    }
+
+    h2 {
+        color: #ff1f8f;
+    }
+
+    .MuiFormControl-root  {
+        width: 100%;
+    }
+
+    .submit-button {
+        margin-top: toRem(20);
+    }
+}
+
+.min-height {
+    @include height(420);
+}

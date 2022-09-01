@@ -1,0 +1,15 @@
+@import "../../styles/fonts";
+@import "../../styles/colors";
+@import "../../styles/utils";
+
+.footer-container {
+    background-color: #ee91a5;
+    @include padding(30,0,50);
+    position: relative;
+
+    .copy-right {
+        @include fontSize(20);
+        font-weight: 500;
+        color: #ff1f8f;
+    }
+}
